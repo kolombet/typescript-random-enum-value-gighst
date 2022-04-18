@@ -1,8 +1,13 @@
 //fifo - first in - first out
-class Stack {
-  push(val) {}
+class Stack<T> {
+  array = [];
+  push(val:T) {
+    this.array.push(val);
+  }
 
-  pop(): {};
+  pop():T {
+    return this.array.pop();
+  };
 }
 const queue = new Stack<string>();
 queue.push('message1');
